@@ -8,7 +8,7 @@ import {
 import { environment } from '../../environments/environment';
 import {User} from '../model/user.model';
 import {AuthActions, AuthActionTypes} from '../auth/auth.actions';
-import {storeFreeze} from 'ngrx-store-freeze';
+
 import {routerReducer} from '@ngrx/router-store';
 
 
@@ -25,4 +25,4 @@ export const reducers: ActionReducerMap<AppState> = {
 
 
 export const metaReducers: MetaReducer<AppState>[] =
-  !environment.production ? [storeFreeze] : [];
+  !environment.production ? [] : [];
